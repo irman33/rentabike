@@ -3,7 +3,6 @@ import './App.css';
 import Product from './Product'
 import Order from './Order'
 // import productData from './bikerentals.json';
-import { formatPrice } from './helper.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -90,19 +89,19 @@ class App extends React.Component {
 
 submitReservation(e) {
   e.preventDefault();
-  const emailPattern = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+  const emailPattern = new RegExp(^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$);
 
-  if (this.state.cart === undefined || this.state.cart.length == 0) {
+  if (this.state.cart === undefined || this.state.cart.length === 0) {
     alert("Please add some products to your cart.");
     return false;
   }
 
-  if(!this.state.name || this.state.name == '') {
+  if(!this.state.name || this.state.name === '') {
     alert("Please Provide Name");
     return false;
   }
 
-  if(!this.state.email || this.state.email == '') {
+  if(!this.state.email || this.state.email === '') {
     alert("Please Provide Email");
     return false;
   }
