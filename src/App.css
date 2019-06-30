@@ -1,0 +1,43 @@
+.App {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.products, .reservation {
+  padding: 10px;
+  background-color: #282c34;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-start;
+  font-size: 16px;
+  color: white;
+}
+
+.reservation {
+  border-left: 3px solid white;
+}
+
+.form {
+  align-self: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .products, .reservation {
+    width: 100%;
+  }
+
+  .reservation {
+  border-left: 0;
+  border-top: 3px solid white;
+  }
+}

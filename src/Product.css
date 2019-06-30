@@ -1,0 +1,15 @@
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product img {
+  height: 60px;
+  width: 60px;
+}
+
+.product button {
+  align-self: ;
+}
